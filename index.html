@@ -1,0 +1,26 @@
+<html ng-app="app">
+    <head>
+        <link href="bower_components/angular/angular-csp.css" rel="stylesheet"></link>
+        <link href="slider.css" rel="stylesheet"></link>
+    </head>
+    <body ng-controller="main">
+        <h1>Hello</h1>
+        name = {{options.name}}
+        age = {{options.age}}
+        <test bind-name="options.name" bind-age="options.age" ng-if="show"></test>
+
+        <div style="margin-top: 50px">
+            <div>{{slideValue}}</div>
+            <input ng-model="min" />
+            <slider style="margin-left: 200px" bind-value="slideValue" on-change="onSliderChange($event)"></slider>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="sub.js"></script>
+        <script src="make-directive.js"></script>
+
+        <script src="slider.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
